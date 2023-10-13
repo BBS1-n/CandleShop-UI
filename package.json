@@ -4,7 +4,7 @@
     "version": "0.0.0",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "build": "vue-tsc --noEmit && vite build",
         "format": "prettier --write .",
         "preview": "vite preview"
     },
@@ -17,6 +17,8 @@
         "postcss": "^8.4.31",
         "prettier": "^3.0.3",
         "tailwindcss": "^3.3.3",
-        "vite": "^4.4.5"
+        "typescript": "^5.2.2",
+        "vite": "^4.4.5",
+        "vue-tsc": "^1.8.19"
     }
 }
