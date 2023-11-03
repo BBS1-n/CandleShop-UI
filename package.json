@@ -6,6 +6,7 @@
         "dev": "vite",
         "build": "vue-tsc --noEmit && vite build",
         "format": "prettier --write .",
+        "format:check": "prettier --check --write .",
         "preview": "vite preview"
     },
     "dependencies": {

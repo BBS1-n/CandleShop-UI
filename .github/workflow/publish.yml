@@ -1,0 +1,22 @@
+name: Should build the project
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build-and-push:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Code should be formatted
+              run: npm run-script format:check
+              shell: bash
+
+            - name: Code should build o_O
+              run: npm run-script build
+              shell: bash
