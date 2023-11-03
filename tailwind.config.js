@@ -4,7 +4,7 @@ export default {
     theme: {
         extend: {
             margin: {
-                xxl: '12rem',
+                xxl: '11rem',
                 l: '7rem',
             },
         },

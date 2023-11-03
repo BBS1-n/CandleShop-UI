@@ -14,6 +14,8 @@
             <div class="ml-l">
                 <h1 class="text-4xl font-bold border-blue-500 pb-2 text-white">Candyshop</h1>
                 <h1 class="text-2xl text-white mb-8">BBS 1 Lüneburg</h1>
+
+                <offer-button />
             </div>
 
             <div class="mt-l"></div>
@@ -64,4 +66,6 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+    import OfferButton from '../components/OfferButton.vue'
+</script>
