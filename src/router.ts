@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import AppVue from './App.vue'
+import MainLayout from './MainLayout.vue'
 
 const routes: Array<RouteRecordRaw> = [
     {
         name: 'main',
         path: '/',
-        component: AppVue,
+        component: MainLayout,
     },
 ]
 
