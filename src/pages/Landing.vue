@@ -10,15 +10,13 @@
             </nav>
         </header>
 
-        <main class="">
-            <h1 class="text-4xl font-bold border-blue-500 pb-2 text-white">Candyshop</h1>
-            <h1 class="text-2xl text-white mb-8">BBS 1 Lüneburg</h1>
+        <main class="mt-xxl">
+            <div class="ml-l">
+                <h1 class="text-4xl font-bold border-blue-500 pb-2 text-white">Candyshop</h1>
+                <h1 class="text-2xl text-white mb-8">BBS 1 Lüneburg</h1>
+            </div>
 
-            <p class="text-white">blabla</p>
-            <p class="text-white">blabla</p>
-            <p class="text-white">blabla</p>
-            <p class="text-white">blabla</p>
-            <p class="text-white">blabla</p>
+            <div class="mt-l"></div>
 
             <div class="relative">
                 <svg
