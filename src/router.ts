@@ -6,6 +6,13 @@ const routes: Array<RouteRecordRaw> = [
         name: 'main',
         path: '/',
         component: MainLayout,
+        children: [
+            {
+                name: 'landing',
+                path: '',
+                component: () => import('./pages/Landing.vue'),
+            },
+        ],
     },
 ]
 
