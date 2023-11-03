@@ -56,7 +56,8 @@
         </main>
 
         <section class="bg-[#2A2A2A] flex-grow pt-8">
-            <p class="text-white">BLABLABLA</p>
+            <about-us />
+
             <!-- content.. -->
         </section>
 
@@ -68,4 +69,5 @@
 
 <script setup lang="ts">
     import OfferButton from '../components/OfferButton.vue'
+    import AboutUs from '../components/AboutUs.vue'
 </script>
