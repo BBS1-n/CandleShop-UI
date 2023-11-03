@@ -1,9 +1,6 @@
 name: Should build the project
 
-on:
-    push:
-        branches:
-            - master
+on: [push, pull_request]
 
 jobs:
     build-and-push:
