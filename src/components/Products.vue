@@ -1,14 +1,8 @@
 <template>
     <div id="products" class="text-center text-white mx-auto max-w-prose">
         <h1 class="text-4xl font-bold underline text-blue-500">Produkte</h1>
-        <p class="text-base mt-4">ToDO</p>
-        <!--<div v-for="product in productList">
-            <img :src="product.image" />
-            <p>{{ product.description }}</p>
-            {{ product.price }}
-        </div>
-    -->
-        <Carousel :autoplay="parseInt('2000')" :itemsToShow="3.95" :wrapAround="true" :transition="500">
+
+        <carousel class="mt-4" :autoplay="parseInt('2000')" :itemsToShow="3.95" :wrapAround="true" :transition="500">
             <Slide v-for="product in productList" :key="product.price">
                 <div class="carousel__item">
                     <img :src="product.image" />
@@ -16,7 +10,7 @@
                     <p>{{ product.price }}</p>
                 </div>
             </Slide>
-        </Carousel>
+        </carousel>
     </div>
 </template>
 
@@ -24,8 +18,7 @@
     import kerze_bubble from '../assets/kerze_bubble.jpeg'
     import kerze_tannenbaum from '../assets/kerze_tannenbaum.jpg'
     import kerze_tannenzapfen from '../assets/kerze_tannenzapfen.jpg'
-    import defineComponent from 'vue'
-    import { Carousel, Pagination, Slide } from 'vue3-carousel'
+    import { Carousel, Slide } from 'vue3-carousel'
 
     import 'vue3-carousel/dist/carousel.css'
 
