@@ -63,7 +63,7 @@
         </section>
 
         <footer class="p-4 bg-[#6a6a6a] text-white">
-            <p>Copyright &copy; 2022</p>
+            <p>Copyright &copy; {{ copyRight }}</p>
         </footer>
     </div>
 </template>
@@ -72,4 +72,9 @@
     import OfferButton from '../components/OfferButton.vue'
     import AboutUs from '../components/AboutUs.vue'
     import Products from '../components/Producs.vue'
+    import { computed, ref } from 'vue'
+
+    const copyRight = computed(() => {
+        return new Date().getFullYear()
+    })
 </script>
