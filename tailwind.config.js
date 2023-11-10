@@ -7,6 +7,10 @@ export default {
                 xxl: '12rem',
                 l: '7rem',
             },
+            padding: {
+                xxl: '12rem',
+                l: '7rem',
+            },
             colors: {
                 accent: '#3A688D',
                 gray: '#2A2A2A',
