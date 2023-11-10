@@ -4,8 +4,14 @@
 
         <main class="pt-xxl bg-cover bg-center mainBg">
             <div class="ml-l mb-l">
-                <h1 class="text-2xl text-white mb-2">BBS 1 Lüneburg</h1>
-                <h1 class="text-5xl font-bold border-blue-500 pb-8 text-white">Candyshop</h1>
+                <div v-if="currentRouteName == 'landing'">
+                    <span class="text-2xl text-white mb-2">BBS 1 Lüneburg</span>
+                    <h1 class="text-5xl font-bold border-blue-500 pb-8 text-white">CandleShop</h1>
+                </div>
+                <div v-else>
+                    <span class="text-2xl text-white mb-2">CandleShop</span>
+                    <h1 class="text-5xl font-bold border-blue-500 pb-8 text-white">{{ sexyRouteName }}</h1>
+                </div>
 
                 <offer-button v-if="currentRouteName == 'landing'" />
             </div>
@@ -34,6 +40,15 @@
     const route = useRoute()
     const currentRouteName = computed(() => {
         return route.name
+    })
+
+    const sexyRouteName = computed(() => {
+        const path = route.path.slice(1, route.path.length)
+
+        const firstLetter = path[0].toUpperCase()
+        const restPath = path.slice(1, path.length)
+
+        return `${firstLetter}${restPath}`
     })
 </script>
 
