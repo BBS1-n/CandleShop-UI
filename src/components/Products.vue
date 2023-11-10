@@ -22,7 +22,14 @@
 
     import 'vue3-carousel/dist/carousel.css'
 
-    const productList = [
+    interface Product {
+        id: number
+        description: string
+        price: string
+        image: string
+    }
+
+    const productList: Product[] = [
         { id: 1, description: 'Wunderschöne Kugelkerze', price: '500€', image: kerze_bubble },
         { id: 2, description: 'Gigantischer Kerzen-Tannebaum', price: '5000€', image: kerze_tannenbaum },
         { id: 3, description: 'Kleine aber wunderschöne Tannenzäpchen', price: '200€', image: kerze_tannenzapfen },
