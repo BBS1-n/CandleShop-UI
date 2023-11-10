@@ -21,7 +21,6 @@ export default {
         fontFamily: {
             sans: ['"Source Sans 3"', 'sans-serif'],
         },
-        extend: {},
     },
     plugins: [],
 }
