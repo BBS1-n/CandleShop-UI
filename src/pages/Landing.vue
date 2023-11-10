@@ -56,12 +56,13 @@
         </main>
 
         <section class="bg-[#2A2A2A] flex-grow pt-8">
-            <about-us />
+            <about-us class="mb-20" />
+            <products />
 
             <!-- content.. -->
         </section>
 
-        <footer class="p-4 bg-blue-500 text-white">
+        <footer class="p-4 bg-[#6a6a6a] text-white">
             <p>Copyright &copy; 2022</p>
         </footer>
     </div>
@@ -70,4 +71,5 @@
 <script setup lang="ts">
     import OfferButton from '../components/OfferButton.vue'
     import AboutUs from '../components/AboutUs.vue'
+    import Products from "../components/Producs.vue"
 </script>
