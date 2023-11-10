@@ -1,5 +1,5 @@
 <template>
-    <div id="products" class="text-center text-white mx-auto max-w-prose">
+    <div id="products" class="text-center text-white mx-auto max-w-3xl">
         <h1 class="text-4xl font-bold underline text-blue-500">Produkte</h1>
 
         <carousel class="mt-4" :autoplay="parseInt('2000')" :itemsToShow="3.95" :wrapAround="true" :transition="500">
