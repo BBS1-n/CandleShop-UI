@@ -12,8 +12,8 @@
 
         <main class="mt-xxl">
             <div class="ml-l">
-                <h1 class="text-4xl font-bold border-blue-500 pb-2 text-white">Candyshop</h1>
-                <h1 class="text-2xl text-white mb-8">BBS 1 Lüneburg</h1>
+                <h1 class="text-2xl text-white mb-2">BBS 1 Lüneburg</h1>
+                <h1 class="text-5xl font-bold border-blue-500 pb-8 text-white">Candyshop</h1>
 
                 <offer-button />
             </div>
