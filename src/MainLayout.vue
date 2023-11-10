@@ -20,9 +20,7 @@
         </main>
 
         <section class="bg-[#2A2A2A] flex-grow pt-8">
-            <div>
-                <router-view />
-            </div>
+            <router-view />
         </section>
 
         <footer-component />
