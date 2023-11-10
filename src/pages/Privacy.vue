@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center text-white mx-auto max-w-prose">
+    <div class="text-center text-white mx-auto max-w-5xl">
         <h1 class="text-4xl font-bold underline text-blue-500">Datenschutz</h1>
 
         <div class="text-base mt-4">
