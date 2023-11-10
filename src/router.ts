@@ -12,6 +12,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: '',
                 component: () => import('./pages/Landing.vue'),
             },
+            {
+                name: 'impressum',
+                path: 'impressum',
+                component: () => import('./pages/Impressum.vue'),
+            },
+            {
+                name: 'datenschutz',
+                path: 'datenschutz',
+                component: () => import('./pages/Privacy.vue'),
+            },
         ],
     },
 ]
