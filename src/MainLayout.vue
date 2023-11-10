@@ -19,7 +19,7 @@
             <transition-component />
         </main>
 
-        <section class="bg-[#2A2A2A] flex-grow pt-8">
+        <section class="bg-[#2A2A2A] flex-grow pb-12">
             <router-view />
         </section>
 
