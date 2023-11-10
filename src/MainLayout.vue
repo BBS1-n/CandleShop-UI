@@ -7,7 +7,7 @@
                 <h1 class="text-2xl text-white mb-2">BBS 1 Lüneburg</h1>
                 <h1 class="text-5xl font-bold border-blue-500 pb-8 text-white">Candyshop</h1>
 
-                <offer-button />
+                <offer-button v-if="currentRouteName == 'landing'" />
             </div>
 
             <transition-component />
@@ -28,6 +28,13 @@
     import FooterComponent from './components/footer/Footer.vue'
     import OfferButton from './components/OfferButton.vue'
     import TransitionComponent from './components/TransitionComponent.vue'
+    import { useRoute } from 'vue-router'
+    import { computed } from 'vue'
+
+    const route = useRoute()
+    const currentRouteName = computed(() => {
+        return route.name
+    })
 </script>
 
 <style>
