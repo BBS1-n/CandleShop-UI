@@ -3,7 +3,7 @@
 ![LOGO](img/logo_small.png)
 
 The BBS1 Lüneburg sells candles.
-This website was created for this sale
+This website was created to advertise the candles.
 
 # Project setup
 
