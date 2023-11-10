@@ -71,5 +71,5 @@
 <script setup lang="ts">
     import OfferButton from '../components/OfferButton.vue'
     import AboutUs from '../components/AboutUs.vue'
-    import Products from "../components/Producs.vue"
+    import Products from '../components/Producs.vue'
 </script>
