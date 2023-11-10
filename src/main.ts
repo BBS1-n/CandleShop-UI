@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import './style.css'
-import MainLayout from './MainLayout.vue'
+import App from './App.vue'
 import router from './router'
 
-const app = createApp(MainLayout)
+const app = createApp(App)
 
 app.use(router)
 
