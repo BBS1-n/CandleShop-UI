@@ -5,5 +5,5 @@
 
 <script setup lang="ts">
     import AboutUs from '../components/AboutUs.vue'
-    import Products from '../components/Producs.vue'
+    import Products from '../components/Products.vue'
 </script>
