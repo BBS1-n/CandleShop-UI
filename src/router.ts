@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import MainLayout from './MainLayout.vue'
+import ContactVue from './pages/Contact.vue'
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -21,6 +22,18 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'datenschutz',
                 path: 'datenschutz',
                 component: () => import('./pages/Privacy.vue'),
+            },
+        ],
+    },
+    {
+        name: 'contact',
+        path: '/kontakt',
+        component: ContactVue,
+        children: [
+            {
+                name: 'contact',
+                path: '',
+                component: () => import('./pages/Contact.vue'),
             },
         ],
     },
