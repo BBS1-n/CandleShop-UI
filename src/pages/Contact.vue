@@ -47,7 +47,9 @@
 
         <section class="bg-gray flex-grow py-16">
             <h2 class="text-4xl text-center text-accent font-bold mb-2">Kontaktieren Sie uns gern</h2>
-            <p class="text-lg text-white text-center mb-6 max-w-lg m-auto">Haben Sie Fragen zu unserer Schulfirma, der Herstellung der Kerzen oder ein anderes Anliegen?</p>
+            <p class="text-lg text-white text-center mb-6 max-w-lg m-auto">
+                Haben Sie Fragen zu unserer Schulfirma, der Herstellung der Kerzen oder ein anderes Anliegen?
+            </p>
             <form class="max-w-lg w-full m-auto flex flex-wrap gap-4" method="post">
                 <div class="relative bg-light_gray rounded max-w-1/2 grow">
                     <input
@@ -148,7 +150,11 @@
                         verarbeitet und genutzt werden.*
                     </label>
                 </div>
-                <input type="submit" class="m-auto bg-accent px-4 py-2 rounded text-white cursor-pointer" value="Abschicken" />
+                <input
+                    type="submit"
+                    class="m-auto bg-accent px-4 py-2 rounded text-white cursor-pointer"
+                    value="Abschicken"
+                />
             </form>
         </section>
     </div>
