@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen flex flex-col">
-        <header-component />
+        <navbar-desktop />
 
         <main class="pt-xxl bg-cover bg-center mainBg">
             <div class="ml-l mb-l">
@@ -28,12 +28,12 @@
 </template>
 
 <script lang="ts" setup>
-    import HeaderComponent from './components/header/Header.vue'
     import FooterComponent from './components/footer/Footer.vue'
     import OfferButton from './components/OfferButton.vue'
     import TransitionComponent from './components/TransitionComponent.vue'
     import { useRoute } from 'vue-router'
     import { computed } from 'vue'
+    import NavbarDesktop from './components/Navbar-Desktop.vue'
 
     const route = useRoute()
     const currentRouteName = computed(() => {
