@@ -1,49 +1,29 @@
-<script setup>
-    function toggleDarkmode() {
-        console.log('clicked Darkmode')
-
-        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon')
-        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
-
-        themeToggleDarkIcon.classList.toggle('hidden')
-        themeToggleLightIcon.classList.toggle('hidden')
-
-        if (document.documentElement.classList.contains('dark')) {
-            document.documentElement.classList.remove('dark')
-            themeToggleLightIcon.classList.remove('hidden')
-        } else {
-            document.documentElement.classList.add('dark')
-            themeToggleDarkIcon.classList.remove('hidden')
-        }
-    }
-</script>
-
 <template>
     <div
         class="flex flex-row fixed top-6 left-1/2 transform -translate-x-1/2 w-11/12 h-20 space-x-10 mx-auto px-4 py-2 z-10 rounded-md backdrop-blur-sm bg-white/30"
     >
-        <a class="h-full aspect-square" href="http://localhost:5173/">
+        <a class="h-full aspect-square" @click="route('/')">
             <img class="object-contain h-full" src="../../img/logo_small.png" />
         </a>
 
         <div class="h-full w-full space-x-6 text-lg font-semibold">
             <a
                 class="inline-flex h-full items-center rounded-md p-3 text-slate-700 hover:bg-white/30 hover:text-slate-900 transition-colors"
-                href="http://localhost:5173/"
+                @click="route('/angebot')"
             >
                 ANGEBOT
             </a>
 
             <a
                 class="inline-flex h-full items-center rounded-md p-3 text-slate-700 hover:bg-white/30 hover:text-slate-900 transition-colors"
-                href="http://localhost:5173/"
+                @click="route('/tbd')"
             >
                 ÜBER UNS
             </a>
 
             <a
                 class="inline-flex h-full items-center rounded-md p-3 text-slate-700 hover:bg-white/30 hover:text-slate-900 transition-colors"
-                href="http://localhost:5173/"
+                @click="route('/kontakt')"
             >
                 KONTAKT
             </a>
@@ -106,3 +86,31 @@
         </button>
     </div>
 </template>
+
+<script setup lang="ts">
+    import { useRouter } from 'vue-router'
+
+    const router = useRouter()
+
+    function toggleDarkmode() {
+        console.log('clicked Darkmode')
+
+        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon')
+        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
+
+        themeToggleDarkIcon?.classList.toggle('hidden')
+        themeToggleLightIcon?.classList.toggle('hidden')
+
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark')
+            themeToggleLightIcon?.classList.remove('hidden')
+        } else {
+            document.documentElement.classList.add('dark')
+            themeToggleDarkIcon?.classList.remove('hidden')
+        }
+    }
+
+    function route(route: string) {
+        router.push(route)
+    }
+</script>
