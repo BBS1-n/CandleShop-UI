@@ -28,14 +28,12 @@
 </template>
 
 <script lang="ts" setup>
-    import HeaderComponent from './components/header/Header.vue'
     import FooterComponent from './components/footer/Footer.vue'
     import OfferButton from './components/OfferButton.vue'
     import TransitionComponent from './components/TransitionComponent.vue'
     import { useRoute } from 'vue-router'
     import { computed } from 'vue'
-import { Namespaces } from '@vue/compiler-core'
-import NavbarDesktop from './components/Navbar-Desktop.vue'
+    import NavbarDesktop from './components/Navbar-Desktop.vue'
 
     const route = useRoute()
     const currentRouteName = computed(() => {
