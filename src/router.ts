@@ -23,17 +23,17 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'datenschutz',
                 component: () => import('./pages/Privacy.vue'),
             },
-        ],
-    },
-    {
-        name: 'contact',
-        path: '/kontakt',
-        component: ContactVue,
-        children: [
             {
                 name: 'contact',
-                path: '',
-                component: () => import('./pages/Contact.vue'),
+                path: '/kontakt',
+                component: ContactVue,
+                children: [
+                    {
+                        name: 'contact',
+                        path: '',
+                        component: () => import('./pages/Contact.vue'),
+                    },
+                ],
             },
         ],
     },
