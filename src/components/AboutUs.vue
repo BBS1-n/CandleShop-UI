@@ -1,6 +1,6 @@
 <template>
     <div class="text-center text-white mx-auto max-w-prose">
-        <h1 class="text-4xl font-bold underline text-blue-500">Über Uns</h1>
+        <h1 class="text-4xl font-bold underline text-accent">Über Uns</h1>
         <p class="text-base mt-4">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
             dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
