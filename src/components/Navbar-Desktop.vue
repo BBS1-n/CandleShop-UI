@@ -23,7 +23,7 @@
         class="flex flex-row fixed top-6 left-1/2 transform -translate-x-1/2 w-11/12 h-20 space-x-10 mx-auto px-4 py-2 z-10 rounded-md backdrop-blur-sm bg-white/30"
     >
         <a class="h-full aspect-square" href="http://localhost:5173/">
-            <img class="object-contain h-full" src="../img/logo_small.png" />
+            <img class="object-contain h-full" src="../../img/logo_small.png" />
         </a>
 
         <div class="h-full w-full space-x-6 text-lg font-semibold">
