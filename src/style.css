@@ -7,3 +7,61 @@
     line-height: 1.5;
     font-weight: 400;
 }
+
+.menuButton {
+	position: relative;
+	display: flex;
+    float: right;
+	align-items: center;
+	height: 80px;
+	cursor: pointer;
+}
+
+.buttonBurger {
+	width: 50px;
+	height: 6px;
+	background: #ffffff;
+	border-radius: 5px;
+}
+
+.buttonBurger::before,
+.buttonBurger::after {
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 6px;
+	background: #ffffff;
+	border-radius: 5px;
+}
+
+.buttonBurger::before {
+	transform: translateY(-16px);
+}
+
+.buttonBurger::after{
+	transform: translateY(16px);
+}
+
+/* Animation */
+.menuButton.open .buttonBurger {
+	transform: translateX(-50px);
+	background: transparent;
+	box-shadow: none;
+}
+.menuButton.open .buttonBurger::before {
+	transform: rotate(45deg) translate(35px, -35px);
+}
+.menuButton.open .buttonBurger::after {
+	transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/*Responsive Webdesign*/
+@media only screen and (max-width: 600px) {
+    #navbar {display:none;}
+	#theme-toggle {float:right;}
+}
+
+@media only screen and (min-width: 600px) {
+    .menuButton > .buttonBurger {display:none;}
+    .menuButton {height: 0px;}
+} 
