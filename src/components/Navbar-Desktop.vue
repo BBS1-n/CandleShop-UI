@@ -128,7 +128,14 @@
     }
 
     function scrollTo(id: string) {
-        document.getElementById(id)?.scrollIntoView({
+        const element = document.getElementById(id)
+
+        if (!element) {
+            console.error('failed to find scroll to element', element)
+            return
+        }
+
+        element.scrollIntoView({
             behavior: 'smooth',
         })
     }
