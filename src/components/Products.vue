@@ -15,11 +15,11 @@
 </template>
 
 <script lang="ts" setup>
-    import kerze_bubble from '../assets/kerze_bubble.jpg'
-    import kerze_dose from '../assets/kerze_dose.jpg'
-    import kerze_glas from '../assets/kerze_glas.jpg'
-    import kerze_tannenbaum from '../assets/kerze_tannenbaum.jpeg'
-    import kerze_tannenzapfen from '../assets/kerze_tannenzapf.jpg'
+    import kerze_bubble from '../assets/kerze-bubble.jpg'
+    import kerze_dose from '../assets/kerze-dose.jpg'
+    import kerze_glas from '../assets/kerze-glas.jpg'
+    import kerze_tannenbaum from '../assets/kerze-tannenbaum.jpeg'
+    import kerze_tannenzapfen from '../assets/kerze-tannenzapf.jpg'
     import { Carousel, Slide } from 'vue3-carousel'
 
     import 'vue3-carousel/dist/carousel.css'
