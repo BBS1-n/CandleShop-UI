@@ -7,5 +7,5 @@
 <script setup lang="ts">
     import AboutUs from '../components/AboutUs.vue'
     import Products from '../components/Products.vue'
-    import Production from "../components/Production.vue"
+    import Production from '../components/Production.vue'
 </script>
