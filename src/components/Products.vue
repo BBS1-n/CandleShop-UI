@@ -6,8 +6,8 @@
             <Slide v-for="product in productList" :key="product.price">
                 <div class="carousel__item">
                     <img :src="product.image" />
-                    <p>{{ product.description }}</p>
-                    <p>{{ product.price }}</p>
+                    <p class="text-[#2A2A2A] dark:text-[#F2F2F2]">{{ product.description }}</p>
+                    <p class="text-[#2A2A2A] dark:text-[#F2F2F2]">{{ product.price }}</p>
                 </div>
             </Slide>
         </carousel>

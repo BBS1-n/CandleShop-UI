@@ -93,8 +93,6 @@
     const router = useRouter()
 
     function toggleDarkmode() {
-        console.log('clicked Darkmode')
-
         var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon')
         var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
 
