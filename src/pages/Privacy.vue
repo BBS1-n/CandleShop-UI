@@ -1,6 +1,6 @@
 <template>
     <div class="text-center mx-auto max-w-5xl">
-        <h1 class="text-4xl font-bold underline text-blue-500">Datenschutz</h1>
+        <h1 class="text-4xl font-bold underline text-accent">Datenschutz</h1>
 
         <div class="text-base mt-4 text-[#2A2A2A] dark:text-[#F2F2F2]">
             <p>
