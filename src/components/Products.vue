@@ -15,9 +15,11 @@
 </template>
 
 <script lang="ts" setup>
-    import kerze_bubble from '../assets/kerze_bubble.jpeg'
-    import kerze_tannenbaum from '../assets/kerze_tannenbaum.jpg'
-    import kerze_tannenzapfen from '../assets/kerze_tannenzapfen.jpg'
+    import kerze_bubble from '../assets/kerze_bubble.jpg'
+    import kerze_dose from '../assets/kerze_dose.jpg'
+    import kerze_glas from '../assets/kerze_glas.jpg'
+    import kerze_tannenbaum from '../assets/kerze_tannenbaum.jpeg'
+    import kerze_tannenzapfen from '../assets/kerze_tannenzapf.jpg'
     import { Carousel, Slide } from 'vue3-carousel'
 
     import 'vue3-carousel/dist/carousel.css'
@@ -30,9 +32,11 @@
     }
 
     const productList: Product[] = [
-        { id: 1, description: 'Wunderschöne Kugelkerze', price: '500€', image: kerze_bubble },
-        { id: 2, description: 'Gigantischer Kerzen-Tannebaum', price: '5000€', image: kerze_tannenbaum },
-        { id: 3, description: 'Kleine aber wunderschöne Tannenzäpchen', price: '200€', image: kerze_tannenzapfen },
+        { id: 1, description: 'Bubble Kerze', price: '6€', image: kerze_bubble },
+        { id: 2, description: 'Tannenbaum Kerze', price: '6€', image: kerze_tannenbaum },
+        { id: 3, description: 'Tanzapf Kerze', price: '6€', image: kerze_tannenzapfen },
+        { id: 4, description: 'Kerze in Dose mit Duft', price: '4€', image: kerze_dose },
+        { id: 5, description: 'Kerze im Glas', price: '5€', image: kerze_glas },
     ]
 </script>
 
