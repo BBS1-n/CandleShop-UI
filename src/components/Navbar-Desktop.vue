@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex flex-row fixed top-6 left-1/2 transform -translate-x-1/2 w-11/12 h-20 space-x-10 mx-auto px-4 py-2 z-10 rounded-md backdrop-blur-sm bg-white/20 dark:bg-[#393939]/20"
+        class="flex flex-row fixed top-6 left-1/2 transform -translate-x-1/2 w-11/12 h-20 space-x-10 mx-auto px-4 py-2 z-10 rounded-md backdrop-blur-sm bg-[#393939]/30"
     >
         <a class="h-full aspect-square" @click="route('/')">
             <img class="object-contain h-full" src="../../img/logo_small.png" />
@@ -8,21 +8,21 @@
 
         <div class="h-full w-full space-x-6 text-lg font-semibold">
             <a
-                class="inline-flex h-full items-center rounded-md p-3 text-slate-700 hover:bg-white/30 hover:text-slate-900 transition-colors"
+                class="inline-flex h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors"
                 @click="route('/angebot')"
             >
                 ANGEBOT
             </a>
 
             <a
-                class="inline-flex h-full items-center rounded-md p-3 text-slate-700 hover:bg-white/30 hover:text-slate-900 transition-colors"
+                class="inline-flex h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors"
                 @click="route('/tbd')"
             >
                 ÜBER UNS
             </a>
 
             <a
-                class="inline-flex h-full items-center rounded-md p-3 text-slate-700 hover:bg-white/30 hover:text-slate-900 transition-colors"
+                class="inline-flex h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors"
                 @click="route('/kontakt')"
             >
                 KONTAKT
