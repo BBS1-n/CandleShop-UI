@@ -9,14 +9,14 @@
         <div class="h-full w-full space-x-6 text-lg font-semibold">
             <a
                 class="inline-flex h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors"
-                @click="route('/angebot')"
+                @click="scrollTo('products')"
             >
                 ANGEBOT
             </a>
 
             <a
                 class="inline-flex h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors"
-                @click="route('/tbd')"
+                @click="scrollTo('aboutus')"
             >
                 ÜBER UNS
             </a>
@@ -125,5 +125,11 @@
 
     function route(route: string) {
         router.push(route)
+    }
+
+    function scrollTo(id: string) {
+        document.getElementById(id)?.scrollIntoView({
+            behavior: 'smooth',
+        })
     }
 </script>
