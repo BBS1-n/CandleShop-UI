@@ -5,7 +5,7 @@
         <carousel class="mt-4" :autoplay="parseInt('2000')" :itemsToShow="3.95" :wrapAround="true" :transition="500">
             <Slide v-for="product in productList" :key="product.price">
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-[#C3B98E] dark:bg-[#393939]">
-                    <img class="w-full pt-2 pr-2 pb-2 pl-2" :src="product.image" :alt="product.description" />
+                    <img class="w-full p-2" :src="product.image" :alt="product.description" />
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2 text-gray dark:text-white">
                             {{ product.description }}
