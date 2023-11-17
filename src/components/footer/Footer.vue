@@ -1,5 +1,5 @@
 <template>
-    <footer class="p-4 bg-[#6a6a6a] text-white flex justify-between items-center">
+    <footer class="p-4 bg-beige dark:bg-light_gray text-white flex justify-between items-center">
         <p>Copyright &copy; {{ copyRight }}</p>
 
         <div class="flex gap-6">
