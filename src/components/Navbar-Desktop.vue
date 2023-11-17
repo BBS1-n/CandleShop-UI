@@ -88,21 +88,53 @@
 </template>
 
 <script setup lang="ts">
+    import { onMounted } from 'vue'
     import { useRouter } from 'vue-router'
 
     const router = useRouter()
 
+    onMounted(() => {
+        const rawDarkSwitch = localStorage.getItem('darkmode')
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon')
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
+
+        //nothing to do here O_O
+        if (!rawDarkSwitch) {
+            return
+        }
+
+        themeToggleDarkIcon?.classList.toggle('hidden')
+        themeToggleLightIcon?.classList.toggle('hidden')
+
+        const darkSwitch = JSON.parse(rawDarkSwitch)
+        if (darkSwitch) {
+            document.documentElement.classList.add('dark')
+            themeToggleDarkIcon?.classList.remove('hidden')
+        } else {
+            document.documentElement.classList.remove('dark')
+            themeToggleLightIcon?.classList.remove('hidden')
+        }
+
+        console.log(darkSwitch)
+    })
+
     function toggleDarkmode() {
-        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon')
-        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon')
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
 
         themeToggleDarkIcon?.classList.toggle('hidden')
         themeToggleLightIcon?.classList.toggle('hidden')
 
         if (document.documentElement.classList.contains('dark')) {
+            //disable dark
+            localStorage.setItem('darkmode', JSON.stringify(false))
+
             document.documentElement.classList.remove('dark')
             themeToggleLightIcon?.classList.remove('hidden')
         } else {
+            //enable dark
+            localStorage.setItem('darkmode', JSON.stringify(true))
+
             document.documentElement.classList.add('dark')
             themeToggleDarkIcon?.classList.remove('hidden')
         }
