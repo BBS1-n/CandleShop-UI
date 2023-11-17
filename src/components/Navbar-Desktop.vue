@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex flex-row fixed top-6 left-1/2 transform -translate-x-1/2 w-11/12 h-20 space-x-10 mx-auto px-4 py-2 z-10 rounded-md backdrop-blur-sm bg-white/30"
+        class="flex flex-row fixed top-6 left-1/2 transform -translate-x-1/2 w-11/12 h-20 space-x-10 mx-auto px-4 py-2 z-10 rounded-md backdrop-blur-sm bg-white/20 dark:bg-[#393939]/20"
     >
         <a class="h-full aspect-square" @click="route('/')">
             <img class="object-contain h-full" src="../../img/logo_small.png" />
