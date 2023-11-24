@@ -3,7 +3,7 @@
         class="flex flex-col sm:flex-row fixed top-3 left-1/2 transform -translate-x-1/2 w-11/12 h-auto sm:h-20 space-y-0 sm:space-y-0 sm:space-x-10 mx-auto px-4 py-2 z-10 rounded-md backdrop-blur-sm bg-[#393939]/30"
     >
         <a class="h-16 sm:h-full aspect-square cursor-pointer max-sm:hidden" @click="route('/')">
-            <img class="object-contain h-full" src="../assets/logo_small.jpg" />
+            <img class="object-contain h-full" src="../assets/logo_small.png" />
         </a>
 
         <div class="h-auto sm:h-full w-full space-x-0 sm:space-x-6 text-lg font-semibold max-sm:text-center">
