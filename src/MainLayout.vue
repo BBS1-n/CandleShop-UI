@@ -3,7 +3,7 @@
         <navbar-desktop />
 
         <main class="pt-xxl bg-cover bg-center mainBg">
-            <div class="ml-l mb-l">
+            <div class="lg:ml-l lg:mb-l max-lg:items-center max-lg:text-center">
                 <div v-if="currentRouteName == 'landing'">
                     <span class="text-2xl text-white mb-2">BBS 1 Lüneburg</span>
                     <h1 class="text-5xl font-bold border-blue-500 pb-8 text-white">CandleShop</h1>
