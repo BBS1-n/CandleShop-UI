@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen flex flex-col">
-        <navbar-desktop />
+        <navbar />
 
         <main class="pt-xxl bg-cover bg-center mainBg">
             <div class="lg:ml-l lg:mb-l max-lg:items-center max-lg:text-center">
@@ -33,7 +33,7 @@
     import TransitionComponent from './components/TransitionComponent.vue'
     import { useRoute } from 'vue-router'
     import { computed } from 'vue'
-    import NavbarDesktop from './components/Navbar-Desktop.vue'
+    import Navbar from './components/Navbar.vue'
 
     const route = useRoute()
     const currentRouteName = computed(() => {
