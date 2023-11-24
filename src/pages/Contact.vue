@@ -1,9 +1,9 @@
 <template>
     <h2 class="text-4xl text-center text-accent font-bold mb-2">Kontaktieren Sie uns gern</h2>
-    <p class="text-lg text-white text-center mb-6 max-w-lg m-auto">
+    <p class="text-lg text-[#2A2A2A] dark:text-[#F2F2F2] text-center mb-6 max-w-lg m-auto">
         Haben Sie Fragen zu unserer Schulfirma, der Herstellung der Kerzen oder ein anderes Anliegen?
     </p>
-    <form class="max-w-lg w-full m-auto flex flex-wrap gap-4" method="post">
+    <form class="max-w-xs xl:max-w-lg w-full m-auto flex flex-wrap gap-4" method="post">
         <div class="relative bg-light_gray rounded max-w-1/2 grow">
             <input
                 @focusin="labelInTransition('firstName')"
@@ -12,7 +12,7 @@
                 type="text"
                 name="firstName"
                 id="firstName"
-                class="bg-transparent w-full px-2 py-1 border border-gray outline-0 text-white rounded focus:border-[#6a6a6a]"
+                class="bg-transparent w-full px-2 py-1 border border-gray outline-0 text-[#2A2A2A] dark:text-[#F2F2F2] rounded focus:border-[#6a6a6a]"
             />
             <label
                 for="firstName"
@@ -80,9 +80,11 @@
                 class="bg-transparent cursor-pointer accent-accent"
                 required
             />
-            <label for="privacy" class="cursor-text text-white cursor-pointer select-none">
+            <label for="privacy" class="text-[#2A2A2A] dark:text-[#F2F2F2] cursor-pointer select-none">
                 Ich bin damit einverstanden, dass meine personenbezogenen Daten gemäß der
-                <a class="hover:underline" href="/datenschutz" target="_blank">Datenschutzerklärung</a>
+                <a class="hover:underline text-[#2A2A2A] dark:text-[#F2F2F2]" href="/datenschutz" target="_blank"
+                    >Datenschutzerklärung</a
+                >
                 verarbeitet und genutzt werden.*
             </label>
         </div>
