@@ -2,30 +2,17 @@
     <div
         class="flex flex-row fixed top-6 left-1/2 transform -translate-x-1/2 w-11/12 h-20 space-x-10 mx-auto px-4 py-2 z-10 rounded-md backdrop-blur-sm bg-[#393939]/30"
     >
-        <a class="h-full aspect-square" @click="route('/')">
+        <a class="h-full aspect-square cursor-pointer" @click="route('/')">
             <img class="object-contain h-full" src="../../img/logo_small.png" />
         </a>
 
         <div class="h-full w-full space-x-6 text-lg font-semibold">
             <a
-                class="inline-flex h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors"
-                @click="scrollTo('products')"
+                v-for="link in navLinks"
+                class="inline-flex h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors cursor-pointer"
+                @click="link.route.type === 'route' ? route(link.route.link) : scrollTo(link.route.link)"
             >
-                ANGEBOT
-            </a>
-
-            <a
-                class="inline-flex h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors"
-                @click="scrollTo('aboutus')"
-            >
-                ÜBER UNS
-            </a>
-
-            <a
-                class="inline-flex h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors"
-                @click="route('/kontakt')"
-            >
-                KONTAKT
+                {{ link.name.toUpperCase() }}
             </a>
         </div>
 
@@ -88,10 +75,41 @@
 </template>
 
 <script setup lang="ts">
-    import { onMounted } from 'vue'
+    import { onMounted, ref } from 'vue'
     import { useRouter } from 'vue-router'
 
+    interface NavLink {
+        name: string
+        route: {
+            type: 'scroll' | 'route'
+            link: string
+        }
+    }
+
     const router = useRouter()
+    const navLinks = ref<NavLink[]>([
+        {
+            name: 'Angebot',
+            route: {
+                type: 'scroll',
+                link: 'products',
+            },
+        },
+        {
+            name: 'Über uns',
+            route: {
+                type: 'scroll',
+                link: 'aboutus',
+            },
+        },
+        {
+            name: 'Kontakt',
+            route: {
+                type: 'route',
+                link: '/kontakt',
+            },
+        },
+    ])
 
     onMounted(() => {
         const rawDarkSwitch = localStorage.getItem('darkmode')
@@ -128,6 +146,10 @@
     }
 
     function scrollTo(id: string) {
+        if (router.currentRoute.value.path != '/') {
+            router.push('/')
+        }
+
         const element = document.getElementById(id)
 
         if (!element) {
