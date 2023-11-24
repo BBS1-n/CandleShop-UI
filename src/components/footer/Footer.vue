@@ -1,5 +1,7 @@
 <template>
-    <footer class="p-4 bg-beige dark:bg-light_gray text-white flex justify-between items-center">
+    <footer
+        class="p-4 bg-beige dark:bg-light_gray text-white justify-between items-center flex max-sm:flex-col-reverse max-sm:gap-4"
+    >
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Copyright &copy; {{ copyRight }}</a>
 
         <div class="flex gap-6">
