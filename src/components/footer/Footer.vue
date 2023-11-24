@@ -1,6 +1,6 @@
 <template>
     <footer class="p-4 bg-beige dark:bg-light_gray text-white flex justify-between items-center">
-        <p>Copyright &copy; {{ copyRight }}</p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Copyright &copy; {{ copyRight }}</a>
 
         <div class="flex gap-6">
             <footer-button v-for="button in footerButtons" :text="button.text" :route="button.route" />
