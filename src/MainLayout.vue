@@ -9,7 +9,7 @@
                     <h1 class="text-5xl font-bold border-blue-500 pb-8 text-white">CandleShop</h1>
                 </div>
                 <div v-else>
-                    <span class="text-2xl text-white mb-2">CandleShop</span>
+                    <a @click="router.push('/')" class="text-2xl text-white mb-2">CandleShop</a>
                     <h1 class="text-5xl font-bold border-blue-500 pb-8 text-white">{{ sexyRouteName }}</h1>
                 </div>
 
@@ -31,11 +31,12 @@
     import FooterComponent from './components/footer/Footer.vue'
     import OfferButton from './components/OfferButton.vue'
     import TransitionComponent from './components/TransitionComponent.vue'
-    import { useRoute } from 'vue-router'
+    import { useRoute, useRouter } from 'vue-router'
     import { computed } from 'vue'
     import Navbar from './components/Navbar.vue'
 
     const route = useRoute()
+    const router = useRouter()
     const currentRouteName = computed(() => {
         return route.name
     })
