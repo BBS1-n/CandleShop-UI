@@ -1,6 +1,7 @@
 # Candleshop UI
 
 ![LOGO](src/assets//logo_small.png)
+![SITE](assets/site.png)
 
 The BBS1 Lüneburg sells candles.
 This website was created to advertise the candles.
