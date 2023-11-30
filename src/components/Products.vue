@@ -25,13 +25,13 @@
 </template>
 
 <script lang="ts" setup>
+    import { computed, onMounted, ref } from 'vue'
     import kerze_bubble from '../assets/kerze-bubble.jpg'
     import kerze_dose from '../assets/kerze-dose.jpg'
     import kerze_glas from '../assets/kerze-glas.jpg'
     import kerze_tannenbaum from '../assets/kerze-tannenbaum.jpeg'
     import kerze_tannenzapfen from '../assets/kerze-tannenzapf.jpg'
     import { Carousel, Slide } from 'vue3-carousel'
-
     import 'vue3-carousel/dist/carousel.css'
 
     interface Product {
@@ -41,29 +41,14 @@
         image: string
     }
 
-    // müll will nicht
-    //const getNumOfProducts = () => {
-    //    let windowWidth = ref({w: window.innerWidth, h: window.innerHeight})
+    let isMobile = ref(window.innerHeight > window.innerWidth)
+    const numOfProducts = computed(() => (isMobile.value ? 1.9 : 3.5))
 
-    //    const onResizeEvent = () => {
-    //        console.log("ress");
-    //        windowWidth.value.w = window.innerWidth
-    //    }
-    //    onMounted(() => window.addEventListener('resize', onResizeEvent))
-    //    onUnmounted(() => window.removeEventListener('resize', onResizeEvent))
-
-    //    const numOfProducts = computed(() => {
-    //      return windowWidth.value.h > windowWidth.value.w ? 1.9 : 3.5;
-    //    })
-
-    //    const width = computed(() => windowWidth.value.w)
-    //    const height = computed(() => windowWidth.value.h)
-    //    console.log("resize");
-    //    return { width, height, numOfProducts }
-    //}
-
-    let isMobile = window.innerHeight > window.innerWidth
-    let numOfProducts = isMobile ? 1.9 : 3.5
+    onMounted(() => {
+        window.addEventListener('resize', () => {
+            isMobile.value = window.innerHeight > window.innerWidth
+        })
+    })
 
     const productList: Product[] = [
         { id: 1, description: 'Bubble Kerze', price: '6€', image: kerze_bubble },
