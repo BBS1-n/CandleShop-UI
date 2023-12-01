@@ -18,6 +18,6 @@
 
 <script setup lang="ts">
     function openPopup() {
-        window.open('/CandleShop-UI/winterzauber.jpg', '_blank', 'width=400,height=600')
+        window.open('/CandleShop-UI/winterzauber.jpg', '_blank')
     }
 </script>
