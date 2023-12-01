@@ -14,6 +14,7 @@
                 </div>
 
                 <offer-button v-if="currentRouteName == 'landing'" />
+                <ad-button class="ml-6" v-if="currentRouteName == 'landing'" />
             </div>
 
             <transition-component />
@@ -30,6 +31,7 @@
 <script lang="ts" setup>
     import FooterComponent from './components/footer/Footer.vue'
     import OfferButton from './components/OfferButton.vue'
+    import AdButton from './components/AdButton.vue'
     import TransitionComponent from './components/TransitionComponent.vue'
     import { useRoute, useRouter } from 'vue-router'
     import { computed } from 'vue'
