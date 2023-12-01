@@ -16,7 +16,7 @@
             </a>
         </div>
 
-        <div class="flex justify-center">
+        <div class="flex justify-center items-end">
             <svg
                 @click="toggleDarkmode"
                 height="62"
