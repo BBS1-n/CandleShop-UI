@@ -7,7 +7,7 @@
         </a>
 
         <div
-            class="h-auto sm:h-full w-full space-x-0 sm:space-x-6 text-lg font-semibold max-sm:text-center flex flex-wrap justify-center"
+            class="h-auto sm:h-full w-full space-x-0 sm:space-x-6 text-lg font-semibold max-sm:text-center flex flex-wrap justify-center md:justify-start"
         >
             <a
                 v-for="link in navLinks"
@@ -118,13 +118,13 @@
                 link: 'aboutus',
             },
         },
-        {
-            name: 'Kontakt',
-            route: {
-                type: 'route',
-                link: '/kontakt',
-            },
-        },
+        // {
+        //     name: 'Kontakt',
+        //     route: {
+        //         type: 'route',
+        //         link: '/kontakt',
+        //     },
+        // },
     ])
 
     onMounted(() => {

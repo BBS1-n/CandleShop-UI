@@ -23,7 +23,7 @@
 
     const footerButtons = ref<FooterButton[]>([
         { text: 'Impressum', route: '/impressum' },
-        { text: 'Kontakt', route: '/kontakt' },
+        // { text: 'Kontakt', route: '/kontakt' },
         { text: 'Datenschutz', route: '/datenschutz' },
     ])
 

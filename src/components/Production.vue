@@ -26,11 +26,11 @@
 
 <script lang="ts" setup>
     import { computed, onMounted, ref } from 'vue'
-    import zutaten_hilfsmittel from '../assets/zutaten-hilfsmittel.jpg'
+    import zutatenHilfsmittel from '../assets/zutaten-hilfsmittel.jpg'
     import draufsicht from '../assets/draufsicht-kocher.jpeg'
     import seitenansicht from '../assets/seitenansicht-kocher.jpg'
-    import wachs_metal from '../assets/wachs-in-metalschale.jpg'
-    import wachs_gussform from '../assets/wachs-in-gussform.jpg'
+    import wachsMetal from '../assets/wachs-in-metalschale.jpg'
+    import wachsGussform from '../assets/wachs-in-gussform.jpg'
     import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel'
     import 'vue3-carousel/dist/carousel.css'
 
@@ -43,11 +43,11 @@
     let isMobile = ref(window.innerHeight > window.innerWidth)
 
     const productList: Product[] = [
-        { id: 1, description: 'Zutaten und Hilfsmittel', image: zutaten_hilfsmittel },
+        { id: 1, description: 'Zutaten und Hilfsmittel', image: zutatenHilfsmittel },
         { id: 2, description: 'Draufsicht vom Kocher', image: draufsicht },
         { id: 3, description: 'Seitenansicht vom Kocher', image: seitenansicht },
-        { id: 4, description: 'Geschmolzenes Wachs im Kocher', image: wachs_metal },
-        { id: 5, description: 'Wachs in Gussform', image: wachs_gussform },
+        { id: 4, description: 'Geschmolzenes Wachs im Kocher', image: wachsMetal },
+        { id: 5, description: 'Wachs in Gussform', image: wachsGussform },
     ]
 </script>
 
