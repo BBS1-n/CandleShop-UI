@@ -1,5 +1,5 @@
 <template>
-    <h2 class="text-4xl text-center text-accent font-bold mb-2">Kontaktieren Sie uns gern</h2>
+    <h2 class="mt-4 text-4xl text-center text-accent font-bold uppercase mb-2">Kontaktieren Sie uns gern</h2>
     <p class="text-lg text-[#2A2A2A] dark:text-[#F2F2F2] text-center mb-6 max-w-lg m-auto">
         Haben Sie Fragen zu unserer Schulfirma, der Herstellung der Kerzen oder ein anderes Anliegen?
     </p>

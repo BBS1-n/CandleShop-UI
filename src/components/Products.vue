@@ -1,6 +1,6 @@
 <template>
-    <div id="products" class="text-center text-white mx-auto max-w-xl">
-        <h1 class="text-4xl font-bold underline text-accent">Produkte</h1>
+    <div id="products" class="text-center text-white mx-auto px-4 md:max-w-xl">
+        <h1 class="text-4xl font-bold uppercase text-accent">Produkte</h1>
 
         <carousel
             class="mt-4"
@@ -51,9 +51,9 @@
     })
 
     const productList: Product[] = [
-        { id: 1, description: 'Kerze im Glas', price: '5€', image: kerze_glas },
-        { id: 2, description: 'Kerze in Dose mit Duft', price: '4€', image: kerze_dose },
-        { id: 3, description: 'Kerze im Glas', price: '5€', image: kerze_glas2 },
+        { id: 1, description: '1x Kerze im Glas', price: '5€', image: kerze_glas },
+        { id: 2, description: '3x Kerze in Dose mit Duft', price: '4€', image: kerze_dose },
+        { id: 3, description: '3x Kerze im Glas', price: '5€', image: kerze_glas2 },
     ]
 </script>
 
