@@ -1,6 +1,6 @@
 <template>
-    <div id="products" class="text-center text-white mx-auto max-w-xl">
-        <h1 class="text-4xl font-bold underline text-accent">Produkte</h1>
+    <div id="products" class="text-center text-white mx-auto px-4 md:max-w-xl">
+        <h1 class="text-4xl font-bold uppercase text-accent">Produkte</h1>
 
         <carousel
             class="mt-4"
@@ -9,7 +9,7 @@
             :itemsToShow="numOfProducts"
             :wrapAround="true"
         >
-            <Slide v-for="product in productList" :key="product.price">
+            <slide v-for="product in productList" :key="product.price">
                 <div
                     class="cursor-grab carousel__item max-w-sm rounded overflow-hidden shadow-lg bg-[#C3B98E] dark:bg-[#393939]"
                 >
@@ -21,16 +21,17 @@
                         <p class="text-gray dark:text-white">Preis: {{ product.price }}</p>
                     </div>
                 </div>
-            </Slide>
+            </slide>
         </carousel>
     </div>
 </template>
 
 <script lang="ts" setup>
     import { computed, onMounted, ref } from 'vue'
-    import kerze_dose from '../assets/kerze_dose.jpg'
-    import kerze_glas from '../assets/kerze_glas.jpg'
-    import kerze_glas2 from '../assets/kerze_glas2.jpg'
+    import kerzeDose3er from '../assets/kerze-dose-3er.jpg'
+    import kerzeGlas from '../assets/kerze-glas.jpg'
+    import kerzeGlas2er from '../assets/kerze-dose-glas-2er.jpeg'
+    import kerzeGlas3er from '../assets/kerze-glas-3er.jpg'
     import { Carousel, Slide } from 'vue3-carousel'
     import 'vue3-carousel/dist/carousel.css'
 
@@ -51,9 +52,12 @@
     })
 
     const productList: Product[] = [
-        { id: 1, description: 'Kerze im Glas', price: '5€', image: kerze_glas },
-        { id: 2, description: 'Kerze in Dose mit Duft', price: '4€', image: kerze_dose },
-        { id: 3, description: 'Kerze im Glas', price: '5€', image: kerze_glas2 },
+        { id: 1, description: 'Kerze im Glas', price: '4€', image: kerzeGlas },
+        { id: 2, description: 'Kerze in der Dose', price: '5€', image: kerzeDose3er },
+        { id: 3, description: '2er-Pack: Kerze im Glas', price: '7,50€', image: kerzeGlas2er },
+        { id: 4, description: '2er-Pack: Kerze in der Dose', price: '9€', image: kerzeGlas2er },
+        { id: 5, description: '3er-Pack: Kerze im Glas', price: '11€', image: kerzeGlas3er },
+        { id: 6, description: '3er-Pack: Kerze in der Dose', price: '12€', image: kerzeDose3er },
     ]
 </script>
 

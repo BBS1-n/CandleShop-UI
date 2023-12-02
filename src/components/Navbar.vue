@@ -1,12 +1,14 @@
 <template>
     <div
-        class="flex flex-col sm:flex-row fixed top-3 left-1/2 transform -translate-x-1/2 w-11/12 h-auto sm:h-20 space-y-0 sm:space-y-0 sm:space-x-10 mx-auto px-4 py-2 z-10 rounded-md backdrop-blur-sm bg-[#393939]/30"
+        class="flex flex-col sm:flex-row fixed top-3 left-1/2 transform -translate-x-1/2 w-11/12 h-auto sm:h-20 space-y-0 sm:space-y-0 sm:space-x-10 mx-auto px-4 py-2 z-10 rounded-md backdrop-blur-sm bg-[#393939]/30 max-w-screen-2xl"
     >
         <a class="h-16 sm:h-full aspect-square cursor-pointer max-sm:hidden" @click="route('/')">
             <img class="object-contain h-full" src="../assets/logo_small.png" />
         </a>
 
-        <div class="h-auto sm:h-full w-full space-x-0 sm:space-x-6 text-lg font-semibold max-sm:text-center">
+        <div
+            class="h-auto sm:h-full w-full space-x-0 sm:space-x-6 text-lg font-semibold max-sm:text-center flex flex-wrap justify-center md:justify-start"
+        >
             <a
                 v-for="link in navLinks"
                 class="inline-flex h-auto sm:h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors cursor-pointer"
@@ -116,13 +118,13 @@
                 link: 'aboutus',
             },
         },
-        {
-            name: 'Kontakt',
-            route: {
-                type: 'route',
-                link: '/kontakt',
-            },
-        },
+        // {
+        //     name: 'Kontakt',
+        //     route: {
+        //         type: 'route',
+        //         link: '/kontakt',
+        //     },
+        // },
     ])
 
     onMounted(() => {

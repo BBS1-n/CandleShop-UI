@@ -1,11 +1,13 @@
 <template>
-    <footer
-        class="p-4 bg-beige dark:bg-light_gray text-white justify-between items-center flex max-sm:flex-col-reverse max-sm:gap-4"
-    >
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Copyright &copy; {{ copyRight }}</a>
+    <footer class="p-4 bg-beige dark:bg-light_gray w-full">
+        <div
+            class="text-white justify-between items-center flex max-sm:flex-col-reverse max-sm:gap-4 max-w-screen-2xl mx-auto w-full"
+        >
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Copyright &copy; {{ copyRight }}</a>
 
-        <div class="flex gap-6">
-            <footer-button v-for="button in footerButtons" :text="button.text" :route="button.route" />
+            <div class="flex gap-x-6 gap-y-3 flex-wrap justify-center">
+                <footer-button v-for="button in footerButtons" :text="button.text" :route="button.route" />
+            </div>
         </div>
     </footer>
 </template>
@@ -21,7 +23,7 @@
 
     const footerButtons = ref<FooterButton[]>([
         { text: 'Impressum', route: '/impressum' },
-        { text: 'Kontakt', route: '/kontakt' },
+        // { text: 'Kontakt', route: '/kontakt' },
         { text: 'Datenschutz', route: '/datenschutz' },
     ])
 
