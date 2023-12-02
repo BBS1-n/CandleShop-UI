@@ -10,16 +10,16 @@
     </div>
 
     <carousel class="mt-4 mb-12 mx-auto max-w-xl" :itemsToShow="1" :wrapAround="true">
-        <Slide v-for="product in productList" :key="product.id">
+        <slide v-for="product in productList" :key="product.id">
             <div
                 class="cursor-grab carousel__item max-w-sm rounded overflow-hidden shadow-lg bg-[#C3B98E] dark:bg-[#393939]"
             >
                 <img class="w-full p-2" :src="product.image" :alt="product.description" :title="product.description" />
             </div>
-        </Slide>
+        </slide>
         <template #addons>
-            <Navigation />
-            <Pagination />
+            <navigation />
+            <pagination />
         </template>
     </carousel>
 </template>

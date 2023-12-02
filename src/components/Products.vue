@@ -9,7 +9,7 @@
             :itemsToShow="numOfProducts"
             :wrapAround="true"
         >
-            <Slide v-for="product in productList" :key="product.price">
+            <slide v-for="product in productList" :key="product.price">
                 <div
                     class="cursor-grab carousel__item max-w-sm rounded overflow-hidden shadow-lg bg-[#C3B98E] dark:bg-[#393939]"
                 >
@@ -21,7 +21,7 @@
                         <p class="text-gray dark:text-white">Preis: {{ product.price }}</p>
                     </div>
                 </div>
-            </Slide>
+            </slide>
         </carousel>
     </div>
 </template>
