@@ -31,14 +31,20 @@ jobs:
                   cache: 'npm'
             - name: Install dependencies
               run: npm install
+
             - name: Build
               run: npm run build
+
             - name: Setup Pages
               uses: actions/configure-pages@v3
+
+            - name: Copy index.html to 404.html
+              run: cp dist/index.html dist/404.html
+              shell: bash
+
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v2
               with:
-                  # Upload dist repository
                   path: './dist'
             - name: Deploy to GitHub Pages
               id: deployment
