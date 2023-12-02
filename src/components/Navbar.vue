@@ -6,7 +6,9 @@
             <img class="object-contain h-full" src="../assets/logo_small.png" />
         </a>
 
-        <div class="h-auto sm:h-full w-full space-x-0 sm:space-x-6 text-lg font-semibold max-sm:text-center flex flex-wrap justify-center">
+        <div
+            class="h-auto sm:h-full w-full space-x-0 sm:space-x-6 text-lg font-semibold max-sm:text-center flex flex-wrap justify-center"
+        >
             <a
                 v-for="link in navLinks"
                 class="inline-flex h-auto sm:h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors cursor-pointer"
