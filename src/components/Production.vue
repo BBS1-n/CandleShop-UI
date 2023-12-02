@@ -25,7 +25,6 @@
 </template>
 
 <script lang="ts" setup>
-    import { computed, onMounted, ref } from 'vue'
     import zutatenHilfsmittel from '../assets/zutaten-hilfsmittel.jpg'
     import draufsicht from '../assets/draufsicht-kocher.jpeg'
     import seitenansicht from '../assets/seitenansicht-kocher.jpg'
@@ -39,8 +38,6 @@
         description: string
         image: string
     }
-
-    let isMobile = ref(window.innerHeight > window.innerWidth)
 
     const productList: Product[] = [
         { id: 1, description: 'Zutaten und Hilfsmittel', image: zutatenHilfsmittel },
@@ -100,5 +97,19 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
+    }
+
+    .carousel__pagination-button::after {
+        background-color: #949191;
+    }
+
+    .carousel__pagination-button--active::after {
+        background-color: #f2f2f2;
+    }
+
+    @media (hover: hover) {
+        .carousel__pagination-button:hover::after {
+            background-color: #f2f2f2;
+        }
     }
 </style>
