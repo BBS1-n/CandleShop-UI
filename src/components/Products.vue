@@ -11,10 +11,10 @@
         >
             <slide v-for="product in productList" :key="product.price">
                 <div
-                    class="cursor-grab carousel__item max-w-sm rounded overflow-hidden shadow-lg bg-[#C3B98E] dark:bg-[#393939]"
+                    class="cursor-grab carousel__item max-w-sm rounded overflow-hidden shadow-lg bg-[#C3B98E] dark:bg-[#393939] p-2"
                 >
-                    <img class="w-full p-2" :src="product.image" :alt="product.description" />
-                    <div class="px-6 py-4">
+                    <img class="w-full" :src="product.image" :alt="product.description" />
+                    <div class="px-6 mx-auto">
                         <div class="font-bold text-xl mb-2 text-gray dark:text-white">
                             {{ product.description }}
                         </div>
@@ -32,7 +32,7 @@
     import kerzeGlas from '../assets/kerze-glas.jpg'
     import kerzeGlas2er from '../assets/kerze-dose-glas-2er.jpeg'
     import kerzeGlas3er from '../assets/kerze-glas-3er.jpg'
-    import { Carousel, Slide } from 'vue3-carousel'
+    import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel'
     import 'vue3-carousel/dist/carousel.css'
 
     interface Product {
@@ -43,7 +43,7 @@
     }
 
     let isMobile = ref(window.innerHeight > window.innerWidth)
-    const numOfProducts = computed(() => (isMobile.value ? 1.9 : 1.9))
+    const numOfProducts = computed(() => (isMobile.value ? 1.25 : 1.9))
 
     onMounted(() => {
         window.addEventListener('resize', () => {
@@ -66,7 +66,7 @@
         pointer-events: none;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start !important;
         width: 100%;
         min-height: 100%;
         height: 100% !important;
@@ -86,6 +86,10 @@
 
     .carousel__track {
         transform-style: preserve-3d;
+    }
+
+    #products .carousel__track {
+        height: 380px;
     }
 
     .carousel__slide--sliding {
