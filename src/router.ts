@@ -37,6 +37,7 @@ const routes: Array<RouteRecordRaw> = [
             // },
         ],
     },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', redirect: { name: 'landing' } },
 ]
 
 const router = createRouter({
