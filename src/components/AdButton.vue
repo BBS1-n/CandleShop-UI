@@ -1,15 +1,15 @@
 <template>
     <button
-        @click="scrollToProducts"
+        @click="scrollToMeetUs"
         class="bg-light_gray bg-opacity-75 border-2 border-gray hover:border-blue-600 text-white font-bold py-2 px-4 rounded-lg transition"
     >
-        Winterzauber
+        Vor Ort
     </button>
 </template>
 
 <script lang="ts" setup>
-    function scrollToProducts() {
-        document.getElementById('winterMagic')?.scrollIntoView({
+    function scrollToMeetUs() {
+        document.getElementById('meetUs')?.scrollIntoView({
             behavior: 'smooth',
         })
     }
