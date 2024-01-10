@@ -10,8 +10,7 @@
             nutzen, um eine breite Palette von Kerzen anzubieten. Damit können wir auch veganen Kunden gerecht werden,
             die unsere Kerzen schätzen. Die Verwendung von lokal beschafftem Bienenwachs stärkt die Verbindung zur
             Region und unterstützt gleichzeitig Imker vor Ort. Wir laden Sie herzlich dazu ein, unsere Kerzen und unsere
-            Philosophie während des anstehenden Winterzaubers in der Pausenhalle der BBS I Lüneburg am 05. Dezember 2023
-            zu erleben. Wir sind überzeugt, dass Sie von der Qualität unserer Kerzen und dem Engagement unseres
+            Philosophie an unseren Ständen zu erleben. Wir sind überzeugt, dass Sie von der Qualität unserer Kerzen und dem Engagement unseres
             Schülerunternehmens beeindruckt sein werden. Mit Ihrem Kauf unterstützen Sie nicht nur unsere Bildung,
             sondern tragen auch zur Förderung nachhaltiger und regionaler Produkte bei.
         </p>
