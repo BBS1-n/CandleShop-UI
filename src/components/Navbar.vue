@@ -112,6 +112,13 @@
             },
         },
         {
+            name: 'Vor Ort',
+            route: {
+                type: 'scroll',
+                link: 'meetUs',
+            },
+        },
+        {
             name: 'Über uns',
             route: {
                 type: 'scroll',

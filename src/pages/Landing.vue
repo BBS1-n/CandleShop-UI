@@ -1,6 +1,6 @@
 <template>
     <about-us class="mb-20" />
-    <winter-magic class="mb-20" />
+    <meet-us class="mb-20" />
     <production class="mb-20" />
     <products />
 </template>
@@ -9,5 +9,5 @@
     import AboutUs from '../components/AboutUs.vue'
     import Products from '../components/Products.vue'
     import Production from '../components/Production.vue'
-    import WinterMagic from '../components/WinterMagic.vue'
+    import MeetUs from '../components/MeetUs.vue'
 </script>
