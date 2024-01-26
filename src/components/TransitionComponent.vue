@@ -8,6 +8,7 @@
             style="display: block; margin-bottom: -1px"
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
+            alt="uebergang"
         >
             <g clip-path="url(#clip0_153_27)">
                 <path
