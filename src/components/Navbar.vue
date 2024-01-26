@@ -13,7 +13,8 @@
                 tabindex="0"
                 v-for="link in navLinks"
                 class="inline-flex h-auto sm:h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors cursor-pointer"
-                @click="link.route.type === 'route' ? route(link.route.link) : scrollTo(link.route.link)"
+                @click="switchS(link)"
+                @keyup.enter="switchS(link)"
             >
                 {{ link.name.toUpperCase() }}
             </a>
@@ -186,5 +187,13 @@
         element.scrollIntoView({
             behavior: 'smooth',
         })
+    }
+
+    function switchS(link: NavLink) {
+        if (link.route.type === 'route') {
+            route(link.route.link)
+        } else {
+            scrollTo(link.route.link)
+        }
     }
 </script>

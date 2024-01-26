@@ -1,6 +1,7 @@
 <template>
     <a
         @click="route(props.route)"
+        @keyup.enter="route(props.route)"
         tabindex="0"
         class="text-gray dark:text-white font-bold py-2 px-4 rounded hover:underline cursor-pointer"
         >{{ props.text }}</a
