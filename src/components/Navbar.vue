@@ -10,6 +10,7 @@
             class="h-auto sm:h-full w-full space-x-0 sm:space-x-6 text-lg font-semibold max-sm:text-center flex flex-wrap justify-center md:justify-start"
         >
             <a
+                tabindex="0"
                 v-for="link in navLinks"
                 class="inline-flex h-auto sm:h-full items-center rounded-md p-3 text-white hover:bg-white/30 hover:text-slate-900 transition-colors cursor-pointer"
                 @click="link.route.type === 'route' ? route(link.route.link) : scrollTo(link.route.link)"
