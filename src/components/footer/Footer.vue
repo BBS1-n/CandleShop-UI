@@ -1,7 +1,7 @@
 <template>
     <footer class="p-4 bg-beige dark:bg-light_gray w-full">
         <div
-            class="text-white justify-between items-center flex max-sm:flex-col-reverse max-sm:gap-4 max-w-screen-2xl mx-auto w-full"
+            class="text-gray dark:text-white justify-between items-center flex max-sm:flex-col-reverse max-sm:gap-4 max-w-screen-2xl mx-auto w-full"
         >
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Copyright &copy; {{ copyRight }}</a>
 

@@ -1,7 +1,9 @@
 <template>
-    <a @click="route(props.route)" class="text-white font-bold py-2 px-4 rounded hover:underline cursor-pointer">{{
-        props.text
-    }}</a>
+    <a
+        @click="route(props.route)"
+        class="text-gray dark:text-white font-bold py-2 px-4 rounded hover:underline cursor-pointer"
+        >{{ props.text }}</a
+    >
 </template>
 
 <script setup lang="ts">
