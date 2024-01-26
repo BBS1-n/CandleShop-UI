@@ -1,7 +1,7 @@
 <template>
     <button
         @click="scrollToProducts"
-        class="bg-blue-500 hover:bg-blue-600 border-2 border-blue-500 hover:border-blue-600 text-white font-bold py-2 px-4 rounded-lg transition"
+        class="bg-accent border-2 border-accent hover:border-blue-600 text-white font-bold py-2 px-4 rounded-lg transition"
     >
         Zum Angebot
     </button>
