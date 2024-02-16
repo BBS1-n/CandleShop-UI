@@ -157,7 +157,12 @@
                 verarbeitet und genutzt werden.*
             </label>
         </div>
-        <input type="submit" class="m-auto bg-accent px-4 py-2 rounded text-white cursor-pointer" value="Abschicken" />
+        <input
+            @click="triggerMailTo"
+            type="submit"
+            class="m-auto bg-accent px-4 py-2 rounded text-white cursor-pointer"
+            value="Abschicken"
+        />
     </form>
 </template>
 
@@ -181,6 +186,7 @@
             // label.classList.remove('opacity-50')
         }
     }
+
     function labelOutTransition(id: string) {
         const input = document.getElementById(id)
         const label = input?.nextElementSibling as HTMLElement
@@ -189,5 +195,23 @@
             label.classList.remove('-translate-y-5', 'text-xs', 'text-[#F2F2F2]')
             // label.classList.add('opacity-50')
         }
+    }
+
+    function triggerMailTo() {
+        const destination = 'test@test.test'
+        const subject = `Kontaktanfrage: ${firstName.value} ${lastName.value}`
+        const body = `Telefonnummer: ${tel.value}
+Adresse: ${address.value}
+Geburtstag: ${birthday.value}
+E-Mail: ${email.value}
+
+
+${message.value}
+        `
+
+        window.open(
+            `mailto:${destination}?subject=${encodeURIComponent(`${subject}`)}&body=${encodeURIComponent(body)}`,
+            '_blank',
+        )
     }
 </script>
