@@ -6,8 +6,8 @@
     <form class="max-w-md xl:max-w-lg w-full m-auto flex flex-wrap gap-4" method="post">
         <div class="relative bg-light_gray rounded max-w-1/2 grow">
             <input
-                @focusin="labelInTransition('firstName')"
-                @focusout="labelOutTransition('firstName')"
+                @focusin="labelTransition('firstName', ELabelActionType.IN)"
+                @focusout="labelTransition('firstName', ELabelActionType.OUT)"
                 v-model="firstName"
                 type="text"
                 name="firstName"
@@ -18,8 +18,8 @@
         </div>
         <div class="relative bg-light_gray rounded max-w-1/2 grow">
             <input
-                @focusin="labelInTransition('lastName')"
-                @focusout="labelOutTransition('lastName')"
+                @focusin="labelTransition('lastName', ELabelActionType.IN)"
+                @focusout="labelTransition('lastName', ELabelActionType.OUT)"
                 required
                 v-model="lastName"
                 type="text"
@@ -31,8 +31,8 @@
         </div>
         <div class="relative bg-light_gray rounded w-full">
             <input
-                @focusin="labelInTransition('email')"
-                @focusout="labelOutTransition('email')"
+                @focusin="labelTransition('email', ELabelActionType.IN)"
+                @focusout="labelTransition('email', ELabelActionType.OUT)"
                 v-model="email"
                 required
                 type="email"
@@ -44,8 +44,8 @@
         </div>
         <div class="relative rounded w-full">
             <textarea
-                @focusin="labelInTransition('message')"
-                @focusout="labelOutTransition('message')"
+                @focusin="labelTransition('message', ELabelActionType.IN)"
+                @focusout="labelTransition('message', ELabelActionType.OUT)"
                 v-model="message"
                 name="message"
                 id="message"
@@ -113,23 +113,23 @@
         message: message,
     } as Record<string, Ref<string>>
 
-    function labelInTransition(id: string) {
-        const field = document.getElementById(id)
-        const label = field?.nextElementSibling as HTMLElement
-
-        if (label && !fieldsMappings[id]?.value.length) {
-            label.classList.add('-translate-y-5', 'text-xs', 'dark:text-white', 'text-gray')
-            label.classList.remove('text-[#808080]')
-        }
+    enum ELabelActionType {
+        IN,
+        OUT,
     }
 
-    function labelOutTransition(id: string) {
+    function labelTransition(id: string, action: ELabelActionType) {
         const field = document.getElementById(id)
         const label = field?.nextElementSibling as HTMLElement
 
         if (label && !fieldsMappings[id]?.value.length) {
-            label.classList.remove('-translate-y-5', 'text-xs', 'dark:text-white', 'text-gray')
-            label.classList.add('text-[#808080]')
+            label.classList[action === ELabelActionType.IN ? 'add' : 'remove'](
+                '-translate-y-5',
+                'text-xs',
+                'dark:text-white',
+                'text-gray',
+            )
+            label.classList[action === ELabelActionType.IN ? 'remove' : 'add']('text-[#808080]')
         }
     }
 
@@ -147,7 +147,7 @@
 
         Object.entries(fieldsMappings).forEach(([key, field]) => {
             field.value = ''
-            labelOutTransition(key)
+            labelTransition(key, ELabelActionType.OUT)
         })
     }
 </script>
