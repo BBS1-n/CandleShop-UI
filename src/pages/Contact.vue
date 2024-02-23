@@ -63,7 +63,10 @@
             />
             <label for="privacy" class="privacy text-gray dark:text-white cursor-pointer select-none">
                 Ich bin damit einverstanden, dass meine personenbezogenen Daten gemäß der
-                <a class="underline text-gray dark:text-white hover:text-accent" href="/datenschutz" target="_blank"
+                <a
+                    class="underline text-gray dark:text-white hover:text-accent"
+                    @click="router.push('datenschutz')"
+                    target="_blank"
                     >Datenschutzerklärung</a
                 >
                 verarbeitet und genutzt werden.*
@@ -103,6 +106,9 @@
 
 <script setup lang="ts">
     import { Ref, ref } from 'vue'
+    import { useRouter } from 'vue-router'
+
+    const router = useRouter()
 
     const firstName = ref('')
     const lastName = ref('')
