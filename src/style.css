@@ -37,4 +37,5 @@ body * {
 
 ::-webkit-scrollbar-thumb {
     @apply bg-white;
+    border-radius: 8px;
 }
