@@ -49,7 +49,7 @@
                 v-model="message"
                 name="message"
                 id="message"
-                class="bg-beige dark:bg-light_gray w-full px-2 py-1 border border-transparent outline-0 text-white rounded focus:border-[#6a6a6a]"
+                class="bg-beige dark:bg-light_gray w-full px-2 py-1 border border-transparent outline-0 rounded focus:border-[#6a6a6a]"
             ></textarea>
             <label for="message" class="label textarea-label text-[#808080] mt-2"> Anliegen </label>
         </div>
@@ -81,10 +81,12 @@
 
 <style>
     input[type='text'],
-    input[type='email'] {
+    input[type='email'],
+    textarea {
         @apply accent-accent cursor-text bg-beige dark:bg-light_gray w-full text-gray dark:text-white;
     }
-    label.label {
+    label.label,
+    .textarea-label {
         @apply absolute cursor-text inset-0 my-auto h-4 flex items-center ms-1 p-1 py-3 w-max transition-all duration-700 bg-beige dark:bg-light_gray rounded;
     }
     .dark input[type='date']::-webkit-calendar-picker-indicator {
