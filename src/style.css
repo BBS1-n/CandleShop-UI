@@ -31,13 +31,10 @@ body * {
     src: url('./assets/fonts/source-sans-3-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-::-webkit-scrollbar,
--mosc {
-    /* height: 10px; */
-    width: 8px;
+::-webkit-scrollbar {
+    width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 100px;
-    opacity: 0.1;
+    @apply bg-white;
 }
