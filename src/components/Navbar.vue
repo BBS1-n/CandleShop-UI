@@ -129,13 +129,13 @@
                 link: 'aboutus',
             },
         },
-        // {
-        //     name: 'Kontakt',
-        //     route: {
-        //         type: 'route',
-        //         link: '/kontakt',
-        //     },
-        // },
+        {
+            name: 'Kontakt',
+            route: {
+                type: 'route',
+                link: '/kontakt',
+            },
+        },
     ])
 
     onMounted(() => {
